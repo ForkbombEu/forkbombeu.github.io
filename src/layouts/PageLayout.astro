@@ -1,0 +1,74 @@
+---
+import "../styles/global.css";
+import "@fontsource/jetbrains-mono";
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const logo_ratio = 0.036;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div
+      class="flex flex-col lg:flex-row min-h-screen gap-0 text-base bg-blue"
+    >
+      <div
+        class="p-10 border border-8 border-b-0 lg:border-r-0 lg:border-b-8 border-amber-100 justify-between lg:w-1/6 flex flex-col"
+      >
+        <div class="flex lg:flex-col md:justify-between">
+          <p class="mb-10 text-xl text-white">
+            We develop crypto <br />
+            and blockchain <br />
+            trusted by hackers.
+          </p>
+          <a href="/">
+            <img
+              src="/forkbomb_logo.svg"
+              alt="logo"
+              width={4064 * logo_ratio}
+              height={2554 * logo_ratio}
+            />
+          </a>
+        </div>
+        <div class="hidden lg:block flex flex-col text-sm">
+          <span class="font-semibold text-white">FORKBOMB B.V.</span>
+          <br />
+          <span class="text-white"
+            >Haparandadam 7-A1 <br /> 1013AK Amsterdam</span
+          >
+          <span class="text-white">+31 (0)6-2645-5733</span>
+          <br /><br />
+          <span class="font-semibold text-white">NEW BUSINESS AND PRESS</span>
+          <a href="mailto:info@forkbomb.eu">
+            <span class="text-white">info@forkbomb.eu</span>
+          </a>
+          <a href="https://twitter.com/forkbombeu">
+            <span class="text-white">@forkbombEU</span>
+          </a>
+          <br /><br />
+          <span class="font-semibold text-white">JOIN FORKBOMB</span>
+          <a href="mailto:work@forkbomb.eu">
+            <span class="text-white">work@forkbomb.eu</span>
+          </a>
+        </div>
+      </div>
+      <div
+        class="col-span-5 flex flex-col flex-grow p-10 border bg-amber-100 border-blue border-8 border-t-0 lg:border-t-8 lg:border-l-0"
+      >
+        <div class="prose text-blue">
+          <slot />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

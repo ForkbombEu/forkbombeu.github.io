@@ -1,0 +1,8 @@
+@tailwind base;
+@layer base {
+  a {
+     @apply underline cursor-pointer underline-offset-1 decoration-pink-300 decoration-4 hover:decoration-2;
+  }
+}
+@tailwind components;
+@tailwind utilities;
