@@ -1,78 +1,66 @@
 ---
-import "../styles/global.css";
-import "@fontsource/jetbrains-mono";
-export interface Props {
-  title: string;
-}
-// import CorporateContactJsonLd from "next-seo";
-
-const { title } = Astro.props;
+import BaseLayout from "~/layouts/BaseLayout.astro";
 const logo_ratio = 0.055;
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
-  <body>
-    <div class="grid min-h-screen grid-cols-1 gap-0 text-base lg:grid-cols-2 bg-blue" >
-      <div class="p-10 border border-8 border-b-0 lg:border-r-0 lg:border-b-8 border-amber-100" >
-        <p class="mb-10 text-4xl text-white">
-          We develop crypto <br />
-          and blockchain <br />
-          trusted by hackers.
-        </p>
-        <img
-          src="/forkbomb_logo.svg"
-          alt="logo"
-          width={4064 * logo_ratio}
-          height={2554 * logo_ratio}
-        />
-      </div>
-      <div class="grid lg:grid-cols-2">
-        <div class="flex flex-col p-10 font-medium border bg-amber-100 border-blue border-x-8 lg:border-x-0 lg:border-y-8 text-blue" >
-          SELECTED PROJECTS <br /><br />
-          <a href="https://zenroom.org">ZENROOM</a>
-          <a href="https://decidiamo.org">DECIDIAMO.</a>
-          <a
-            href="https://medium.com/think-do-tank/reflow-crypto-material-passports-for-the-circular-economy-d75b3aa63678"
-            >REFLOW CRYPTO</a
-          >
-          <a
-            href="https://www.eublockchainforum.eu/news/european-blockchain-pre-commercial-procurement"
-            >EBSI</a
-          >
-          <a href="https://dyne.org/software/tomb">TOMB</a>
-        </div>
-        <div
-          class="flex flex-col p-10 border border-8 border-t-0 lg:border-t-8 lg:border-l-0 border-amber-100"
+<BaseLayout>
+  <div
+    class="grid min-h-screen grid-cols-1 gap-0 text-base lg:grid-cols-2 bg-blue"
+  >
+    <div
+      class="p-10 border border-8 border-b-0 lg:border-r-0 lg:border-b-8 border-amber-100"
+    >
+      <p class="mb-10 text-4xl text-white">
+        We develop crypto <br />
+        and blockchain <br />
+        trusted by hackers.
+      </p>
+      <img
+        src="/forkbomb_logo.svg"
+        alt="logo"
+        width={4064 * logo_ratio}
+        height={2554 * logo_ratio}
+      />
+    </div>
+    <div class="grid lg:grid-cols-2">
+      <div
+        class="flex flex-col p-10 font-medium border bg-amber-100 border-blue border-x-8 lg:border-x-0 lg:border-y-8 text-blue"
+      >
+        SELECTED PROJECTS <br /><br />
+        <a href="https://zenroom.org">ZENROOM</a>
+        <a href="https://decidiamo.org">DECIDIAMO.</a>
+        <a
+          href="https://medium.com/think-do-tank/reflow-crypto-material-passports-for-the-circular-economy-d75b3aa63678"
+          >REFLOW CRYPTO</a
         >
-          <span class="font-semibold text-white">FORKBOMB B.V.</span>
-          <br />
-          <span class="text-white"
-            >Haparandadam 7-A1 <br /> 1013AK Amsterdam</span
-          >
-          <span class="text-white">+31 (0)6-2645-5733</span>
-          <br /><br />
-          <span class="font-semibold text-white">NEW BUSINESS AND PRESS</span>
-          <a href="mailto:info@forkbomb.eu">
-            <span class="text-white">info@forkbomb.eu</span>
-          </a>
-          <a href="https://twitter.com/forkbombeu">
-            <span class="text-white">@forkbombEU</span>
-          </a>
-          <br /><br />
-          <span class="font-semibold text-white">JOIN FORKBOMB</span>
-          <a href="mailto:work@forkbomb.eu">
-            <span class="text-white">work@forkbomb.eu</span>
-          </a>
-        </div>
+        <a
+          href="https://www.eublockchainforum.eu/news/european-blockchain-pre-commercial-procurement"
+          >EBSI</a
+        >
+        <a href="https://dyne.org/software/tomb">TOMB</a>
+      </div>
+      <div
+        class="flex flex-col p-10 border border-8 border-t-0 lg:border-t-8 lg:border-l-0 border-amber-100"
+      >
+        <span class="font-semibold text-white">FORKBOMB B.V.</span>
+        <br />
+        <span class="text-white">Haparandadam 7-A1 <br /> 1013AK Amsterdam</span
+        >
+        <span class="text-white">+31 (0)6-2645-5733</span>
+        <br /><br />
+        <span class="font-semibold text-white">NEW BUSINESS AND PRESS</span>
+        <a href="mailto:info@forkbomb.eu">
+          <span class="text-white">info@forkbomb.eu</span>
+        </a>
+        <a href="https://twitter.com/forkbombeu">
+          <span class="text-white">@forkbombEU</span>
+        </a>
+        <br /><br />
+        <span class="font-semibold text-white">JOIN FORKBOMB</span>
+        <a href="mailto:work@forkbomb.eu">
+          <span class="text-white">work@forkbomb.eu</span>
+        </a>
       </div>
     </div>
-  </body>
-</html>
+  </div>
+</BaseLayout>

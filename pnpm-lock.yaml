@@ -8,6 +8,7 @@ specifiers:
   '@fontsource/jetbrains-mono': ^4.5.11
   '@tailwindcss/typography': ^0.5.8
   astro: ^1.6.0
+  astro-seo: ^0.6.0
   next-seo: ^5.14.0
   react: ^18.2.0
   react-dom: ^18.2.0
@@ -24,6 +25,7 @@ devDependencies:
   '@astrojs/react': 1.2.2_gqczyrwmhlwpr6z64d3xh3wv54
   '@fontsource/jetbrains-mono': 4.5.11
   '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.2
+  astro-seo: 0.6.0
   next-seo: 5.14.0_pknogjuzx4bv7zxtatcb2ahtsq
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -909,6 +911,10 @@ packages:
     dependencies:
       tslib: 2.4.1
     dev: false
+
+  /astro-seo/0.6.0:
+    resolution: {integrity: sha512-nR+dJlAyQhX6s0oAmbBqPq3KCZax/zVAerFsclGiJQ2znOkS/7L+RGjziS4M9Q3OQxm3FMfqIKHp9Ns73Q81ww==}
+    dev: true
 
   /astro/1.6.4:
     resolution: {integrity: sha512-4Yi6fonZK/t8I1BdZ2YaTtSKUSeB8RoikDDssqkiO6j2BAfK4HOhRk70PrrkKyY5gK6VCe/Nao8ABq3GZfxm9g==}
