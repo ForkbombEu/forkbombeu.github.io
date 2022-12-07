@@ -8,6 +8,7 @@ import matomo from '@jop-software/astro-matomo';
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://forkbomb.eu",
   integrations: [tailwind(), sitemap(), image(), react(),
     matomo({
       baseUrl: "https://matomo.dyne.org/",
