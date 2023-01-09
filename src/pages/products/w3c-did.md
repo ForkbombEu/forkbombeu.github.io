@@ -22,7 +22,7 @@ The DID document for the blockchain oracle produced by the method contains a set
 ## Blockchain anchoring and SSI
 The DID and the DID Document are produced and resolved by our Controller, who also notarizes the DID Document on Dyne.org's Ethereum test network and [Planetmint](https://planetmint.io/).
 
-The DID Document is currently created by the DID controller during the announce process. The announce includes a cryptographic handshake, described in the “Oracle key issuance” chapter where the ephemeral secret key (eSK) is exchanged. Then the DID Document is created, stored on a Redis local database as well as on fabchain. The txId containing the DID Document is then stored in Redis and  is contained in the Oracle’s DID Document under the key “alsoKnownAs”.
+The DID Document is currently created by the DID controller during the announce process. The announce includes a cryptographic handshake, described in the “Oracle key issuance” chapter where the ephemeral secret key (eSK) is exchanged. Then the DID Document is created, stored on a Redis local database as well as on blockchain. The txId containing the DID Document is then stored in Redis and  is contained in the Oracle’s DID Document under the key “alsoKnownAs”.
 
 The specs are available at: [https://dyne.github.io/W3C-DID/#/](https://dyne.github.io/W3C-DID/#/) and the DID controller is deployed at [https://did.dyne.org/docs/](https://did.dyne.org/docs/) 
 

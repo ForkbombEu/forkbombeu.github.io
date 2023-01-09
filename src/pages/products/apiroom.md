@@ -22,7 +22,7 @@ Apiroom's front-end embeds Zenroom (trans-compiled in WASM and packed into an [n
 ## Microservice rapid prototyping
 
 Along with Zenroom, Apiroom embeds [Restroom-mw](https://dyne.org/restroom-mw/#/), an npm package that exposes the Zenroom VM to a REST API.
-Thi allows you to write Zencode smart contract, and deploy it on Apiroom as an API. You can later search and edit the APIs you have deployed: 
+This allows you to write Zencode smart contract, and deploy it on Apiroom as an API. You can later search and edit the APIs you have deployed: 
 
 ![apiroom shot2](https://dev.zenroom.org/_media/images/apiroom/Shot7LinkApi.png)
 
