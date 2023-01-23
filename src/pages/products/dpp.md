@@ -8,8 +8,8 @@ layout: "~/layouts/PageLayout.astro"
 ![Zenroom logo](https://zenroom.org/wp-content/uploads/2019/11/zenroom.png)
 
 ## Applications
+DPPs open up possibilities for innovative workflows, focusing on the flow of tangible goods, for consumer and regulatory information. Our DPP is cross-sectoral, flexible, based on common rules, principles, taxonomy, and standards. The DPP covers circular economy (using the [ValueFlows](https://www.valueflo.ws/) ontology) and can be used to describe digital twins for industrial and consumer applications. 
 
-DPPs open up possibilities for innovative workflows, focusing on the flow of tangible goods, for consumer and regulatory information. Our DPP is cross-sectoral, flexiblae, based on common rules, principles, taxonomy, and standards. The DPP covers circular economy (using the [ValueFlows](https://www.valueflo.ws/) ontology) and can be used to describe digital twins for industrial and consumer applications. 
 
 ## Fetures
 Our DPP offers Tracking and tracing of products and materials, collaboration on designs and delivery of services. The DPP accommodates complex supply chains scenarios, where multiple products or services make their way into the final product, as for example a custom made bicycle based on open source designs, repurposed clothing or refurbished machines.  
@@ -19,4 +19,4 @@ The actors performing operations in the products and services stored in the DPP,
 
 ---------
 
-The DPP is developed in collaboration of the [Intefacer](https://www.interfacerproject.eu/) consortium and is the evolution of a prototype developed within the case-study winner H2020 [REFLOW Project](https://reflowproject.eu/).
+The DPP is developed in collaboration of the [Intefacer](https://www.interfacerproject.eu/) consortium and is the evolution of a prototype developed within the case-study winner H2020 [REFLOW Project](https://ec.europa.eu/research-and-innovation/en/projects/success-stories/all/six-european-cities-gear-more-circular-future).
