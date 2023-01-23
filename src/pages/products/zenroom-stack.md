@@ -10,7 +10,7 @@ layout: "~/layouts/PageLayout.astro"
 
 ## Programmable by non-programmers
 
-Programmable in the English-like DSL [Zencode](https://decodeproject.eu/blog/smart-contracts-english-speaker.html): based on Gherkin (BDD), Zencode is designed to be readable by non-programmer and written with minimal training. Zencode can be written in the online IDE “Apiroom”, which offers auto-complete, examples of each statement and extensive documentation.
+Programmable in the English-like DSL [Zencode](https://decodeproject.eu/blog/smart-contracts-english-speaker.html): based on Gherkin (BDD), Zencode is designed to be readable by non-programmer and written with minimal training. Zencode can be written in the online IDE [Apiroom](apiroom), which offers auto-complete, examples of each statement and extensive documentation.
 
 ## Ultra portable
 
@@ -20,7 +20,7 @@ Based on the crypto virtual machine “Zenroom”: a super lightweight and ultra
 Microservices: the stack is designed to operate as an orchestra of microservices, with minimal dependencies and low footprint. Apiroom enables developers to create Dockerfiles and installers for microservices, entirely programmed in Zencode. 
 
 ## Nextgen cryptography
-Zenroom can sign and verify using ECDSA, EDDSA, Schnorr on the most widely used elliptic curves such as SECP256K1, BLS381, ED25519 (and many more, see full [list](https://github.com/dyne/Zenroom/blob/master/build/config.mk#L294-L297)). Additionally, Zenroom is capable of **zero knowledge proofs**, **multi-party computation**, **W3C-VC** and **quantum-proof cryptography**. 
+Zenroom can sign and verify using ECDSA, EDDSA, Schnorr on the most widely used elliptic curves such as SECP256K1, BLS381, ED25519 (and many more, see full [list](https://github.com/dyne/Zenroom/blob/master/build/config.mk#L294-L297)). Additionally, Zenroom is capable of **zero knowledge proofs**, **multi-party computation**, **[W3C-DID](w3c-did)**, **W3C-VC** and **quantum-proof cryptography**. 
 
 ## Interoperable
 **Blockchain interoperability** is the ability of blockchains to communicate with other blockchains, enabling data exchange and transfers of tokens or assets across different distributed ledger technologies. 
