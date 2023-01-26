@@ -3,7 +3,7 @@ layout: "~/layouts/PageLayout.astro"
 ---
 # W3C-DID METHOD
 
-> W3C-DID method for blockchain oracles and interoperability: https://dyne.github.io/W3C-DID  
+> Federated, multi-storage, extendable, Zenroom-based W3C-DID implementation 
 
 ![Zenroom logo](https://zenroom.org/wp-content/uploads/2019/11/zenroom.png)
 
@@ -15,15 +15,62 @@ Decentralized Identifiers (DID) is now an official web standard from the World W
 
 In 2022 Dyne.org have implemented a W3C-DID method, which has been approved by the W3C governing board and included in the official [DID method list](https://www.w3.org/TR/did-spec-registries/#did-methods).  
 
+
+## 3-Levels federated DIDs
+
+In our implementation, users' DIDs are created by 2nd level organizations named `context`. Each *Context is granted a DID along with the ability to create DIDs* by a 1st level organizations, named `domain`. A *Domain receives its DID and privileges by the `global admin`*.  
+
+In the graph below, the `UE` is the global admin, each country is a `domain` while each city is a `context`:  
+
+
+
+```
+
+		| [D]France
+		|   
+(GA)UE 	|
+		|  
+		|			          | user1
+		|		   | (C) Rome |
+		|		   | 	      | user2
+		| [D]Italy | 
+				   |
+				   |		   | user-3
+				   | (C) Milan |
+							   | user-4
+							   | user-5
+							  							  
+```
+
+## Easy to extend
+Our entire W3C-DID method has been implemented using the [Zenroom stack](https://forkbomb.eu/products/zenroom-stack/), meaning that data structures are easy to modify, more complex authentication methods can be employed (including **multi-signature** and zero **knowledge proof**) and **W3C-VC** can be combined with the DID.
+
+
+## End-to-end cryptography
+Each `write operation` requires a cryptographic signature of it's relevant controller: the creation and deletion (disabling) of a DID requires a cryptographic signature from the parent organization, the update operation requires the signature of the `controller` declared in the DID Document.  
+
 ## Focus on cryptography
 The first focus for the method was to register Zenswarm Oracles identities, in a way that is both machine and human readable and anchored to a blockchain.
 The DID document for the blockchain oracle produced by the method contains a set of public keys **ECDSA, EDDSA, Schnorr, Ethereum address as well as a [Dilithium quantum-proof public key](https://www.nist.gov/news-events/news/2022/07/nist-announces-first-four-quantum-resistant-cryptographic-algorithms)**.
 
+## Passwordless microservices 
+When security is a must, services creating DIDs of any level can optionally operate offline, in order not to have private keys on the servers. DIDs can be signed manually using the built in CLI. This scenario is recommended for the global admin microservice.
+
+## Multiple storage possibilities
+The Zenroom ecosystem components allows the DID documents to be stored in differently ways, including: 
+- File system
+- Redis
+- SQL databases
+- Git
+- IPFS
+- [Distributed storage](zenswarm-storage)
+- Blockchain
+
 ## Blockchain anchoring and SSI
-The DID and the DID Document are produced and resolved by our Controller, who also notarizes the DID Document on Dyne.org's Ethereum test network and [Planetmint](https://planetmint.io/).
+At creation, the DID Documents are notarized on blockchain (Ethereum, Fabric and [Planetmint](https://planetmint.io/) are possible). The txId containing the DID Document is then stored in DID Document under the key “alsoKnownAs”.
 
-The DID Document is currently created by the DID controller during the announce process. The announce includes a cryptographic handshake, described in the “Oracle key issuance” chapter where the ephemeral secret key (eSK) is exchanged. Then the DID Document is created, stored on a Redis local database as well as on blockchain. The txId containing the DID Document is then stored in Redis and  is contained in the Oracle’s DID Document under the key “alsoKnownAs”.
-
-The specs are available at: [https://dyne.github.io/W3C-DID/#/](https://dyne.github.io/W3C-DID/#/) and the DID controller is deployed at [https://did.dyne.org/docs/](https://did.dyne.org/docs/) 
+## Links
+- DID explorer [http://explorer.did.dyne.org/](http://explorer.did.dyne.org/)
+- Documentation: [https://dyne.github.io/W3C-DID/#/](https://dyne.github.io/W3C-DID/#/) 
 
 
