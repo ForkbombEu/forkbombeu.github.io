@@ -47,7 +47,9 @@ Our entire W3C-DID method has been implemented using the [Zenroom stack](https:/
 
 
 ## End-to-end cryptography
-Each `write operation` requires a cryptographic signature of it's relevant controller: the creation and deletion (disabling) of a DID requires a cryptographic signature from the parent organization, the update operation requires the signature of the `controller` declared in the DID Document.  
+Each `write operation` requires a cryptographic signature of it's relevant controller: the creation and deletion (disabling) of a DID requires a cryptographic signature from the parent organization, the update operation requires the signature of an admin (`context`, `domain` or `global admin`) hierarchically above it. 
+
+In the example above, the `user-5` can be modified by `Milan` or `Italy` or `UE`, but *not* by `Rome` or `France`.
 
 ## Focus on cryptography
 The first focus for the method was to register Zenswarm Oracles identities, in a way that is both machine and human readable and anchored to a blockchain.
@@ -63,11 +65,11 @@ The Zenroom ecosystem components allows the DID documents to be stored in differ
 - SQL databases
 - Git
 - IPFS
-- [Distributed storage](zenswarm-storage)
+- [Distributed storage](https://forkbomb.eu/products/zenswarm-storage)
 - Blockchain
 
 ## Blockchain anchoring and SSI
-At creation, the DID Documents are notarized on blockchain (Ethereum, Fabric and [Planetmint](https://planetmint.io/) are possible). The txId containing the DID Document is then stored in DID Document under the key “alsoKnownAs”.
+At creation, the DID Documents are notarized on blockchain (Ethereum, Fabric and [Planetmint](https://planetmint.io/) are possible). The txId containing the DID Document is then stored in the DID Document in the metadata.
 
 ## Links
 - DID explorer [http://explorer.did.dyne.org/](http://explorer.did.dyne.org/)

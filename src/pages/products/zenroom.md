@@ -11,7 +11,7 @@ layout: "~/layouts/PageLayout.astro"
 ## Blockchain interop
 Blockchain interoperability is the ability of blockchains to communicate with other blockchains, enabling data exchange and transfers of tokens or assets across different distributed ledger technologies. 
 
-Zenroom offers **interoperability** between **Bitcoin, Ethereum, Fabric, Sawtooth, Iota, Planetmint**, meaning that a single Zenroom smart contract can perform operations on each of these ledgers, allowing operations as NFT or token transfer along with multilayer and multi-source data notarization. The capability has been used to develop the blockchain oracle [Zenswarm](zenswarm).
+Zenroom offers **interoperability** between **Bitcoin, Ethereum, Fabric, Sawtooth, Iota, Planetmint**, meaning that a single Zenroom smart contract can perform operations on each of these ledgers, allowing operations as NFT or token transfer along with multilayer and multi-source data notarization. The capability has been used to develop the blockchain oracle [Zenswarm](https://forkbomb.eu/products/zenswarm).
 
 ## Ultra-portable and ultra-light
 Zenroom is a tiny secure execution environment that integrates in any platform and application, even on a chip or a web page. It can authenticate, authorize access and execute human-readable smart contracts for blockchains, databases and much more.
