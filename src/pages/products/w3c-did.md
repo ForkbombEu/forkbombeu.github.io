@@ -20,7 +20,7 @@ In 2022 Dyne.org have implemented a W3C-DID method, which has been approved by t
 
 In our implementation, users' DIDs are created by 2nd level organizations named `context`. Each *Context is granted a DID along with the ability to create DIDs* by a 1st level organizations, named `domain`. A *Domain receives its DID and privileges by the `global admin`*.  
 
-In the graph below, the `UE` is the global admin, each country is a `domain` while each city is a `context`:  
+In the graph below, the `EU` is the global admin, each country is a `domain` while each city is a `context`:  
 
 
 
@@ -28,7 +28,7 @@ In the graph below, the `UE` is the global admin, each country is a `domain` whi
 
 		| [D]France
 		|   
-(GA)UE 	|
+(GA)EU 	|
 		|  
 		|			          | user1
 		|		   | (C) Rome |
@@ -49,7 +49,7 @@ Our entire W3C-DID method has been implemented using the [Zenroom stack](https:/
 ## End-to-end cryptography
 Each `write operation` requires a cryptographic signature of it's relevant controller: the creation and deletion (disabling) of a DID requires a cryptographic signature from the parent organization, the update operation requires the signature of an admin (`context`, `domain` or `global admin`) hierarchically above it. 
 
-In the example above, the `user-5` can be modified by `Milan` or `Italy` or `UE`, but *not* by `Rome` or `France`.
+In the example above, the `user-5` can be modified by `Milan` or `Italy` or `EU`, but *not* by `Rome` or `France`.
 
 ## Focus on cryptography
 The first focus for the method was to register Zenswarm Oracles identities, in a way that is both machine and human readable and anchored to a blockchain.
