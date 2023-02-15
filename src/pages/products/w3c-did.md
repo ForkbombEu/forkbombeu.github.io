@@ -16,11 +16,11 @@ Decentralized Identifiers (DID) is now an official web standard from the World W
 In 2022 Dyne.org have implemented a W3C-DID method, which has been approved by the W3C governing board and included in the official [DID method list](https://www.w3.org/TR/did-spec-registries/#did-methods).  
 
 
-## 3-Levels federated DIDs
+## 4-Levels federated DIDs
 
-In our implementation, users' DIDs are created by 2nd level organizations named `context`. Each *Context is granted a DID along with the ability to create DIDs* by a 1st level organizations, named `domain`. A *Domain receives its DID and privileges by the `global admin`*.  
+In our implementation, users' DIDs are created by 3rd level organizations named `Context`. Each *Context* is granted a DID along with the ability to create DIDs by a 2nd level organizations, named `Domain`. A *Domain* receives its DID and privileges by the 1st level organization, the `global admin`.  
 
-In the graph below, the `EU` is the global admin, each country is a `domain` while each city is a `context`:  
+In the graph below, the `EU` is the global admin, each country is a `Domain` while each city is a `Context`:  
 
 
 
