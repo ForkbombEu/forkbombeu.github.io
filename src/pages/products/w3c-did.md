@@ -42,6 +42,15 @@ In the graph below, the `EU` is the global admin, each country is a `Domain` whi
 							  							  
 ```
 
+
+## Explorer
+
+Our DID implementation comes with a mobile friendly DID explorer, you can see it below or at [https://explorer.did.dyne.org/](https://explorer.did.dyne.org/).
+
+<iframe src="https://explorer.did.dyne.org/" title="DID Explorer" width="800" height="700" style="background: #FFFFFF;">DID Explorer</iframe>
+
+
+
 ## Easy to extend
 Our entire W3C-DID method has been implemented using the [Zenroom stack](https://forkbomb.eu/products/zenroom-stack/), meaning that data structures are easy to modify, more complex authentication methods can be employed (including **multi-signature** and zero **knowledge proof**) and **W3C-VC** can be combined with the DID.
 
@@ -71,8 +80,33 @@ The Zenroom ecosystem components allows the DID documents to be stored in differ
 ## Blockchain anchoring and SSI
 At creation, the DID Documents are notarized on blockchain (Ethereum, Fabric and [Planetmint](https://planetmint.io/) are possible). The txId containing the DID Document is then stored in the DID Document in the metadata.
 
+
+## Try it now
+ 
+Create your test DID: the test DID is created under the ''sandbox.test'' context, you can resolve it and see in the DID explorer. by following the instructions below:
+ 
+1) Generate your private and public keys in the frame below:
+
+<iframe src="./did-test-1-generate_keys_pks.html" title="Keygen" width="700" height="700">Generate private and public keys</iframe>
+
+
+2) Copy the public keys generated in the frame above, submit it and see the DID produced in the output:
+
+
+<iframe src="./did-test-2-generate_sandbox_did_doc.html" title="Produce DID" width="700" height="1200">Produce and register DID</iframe>
+
+If the DID creation was successful, you should receive an output like: 
+
+```json
+
+{
+  "DID": "did:dyne:sandbox.test:FqrHzg1YToYaXEzkyFkX3ZCGxAxZPW3THBcTd6fhyQhy",
+  "DID_show_explorer": "https://explorer.did.dyne.org/details/did:dyne:sandbox.test:FqrHzg1YToYaXEzkyFkX3ZCGxAxZPW3THBcTd6fhyQhy",
+  "resolve_DID": "https://did.dyne.org/dids/did:dyne:sandbox.test:FqrHzg1YToYaXEzkyFkX3ZCGxAxZPW3THBcTd6fhyQhy"
+}
+```
+
 ## Links
 - DID explorer [http://explorer.did.dyne.org/](http://explorer.did.dyne.org/)
 - Documentation: [https://dyne.github.io/W3C-DID/#/](https://dyne.github.io/W3C-DID/#/) 
-
 
