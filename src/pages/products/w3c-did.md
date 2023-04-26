@@ -89,6 +89,9 @@ Create your test DID: the test DID is created under the ''sandbox.test'' context
 
 <iframe src="https://forkbomb.eu/products/did-test-1-generate_keys_pks/" title="Keygen" width="700" height="700">Generate private and public keys</iframe>
 
+In order to create your private and public keys, alternatively you can manually call this [API](https://apiroom.net/api/W3CDID/create_keys_pks) or run this [Zencode](https://apiroom.net/showme/zencode/W3CDID/create_keys_pks) in Zenroom.
+
+
 
 2) Copy the public keys generated in the frame above, submit it and see the DID produced in the output:
 
