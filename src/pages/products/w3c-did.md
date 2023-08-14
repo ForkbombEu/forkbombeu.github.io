@@ -87,7 +87,7 @@ Create your test DID: the test DID is created under the ''sandbox.test'' context
  
 1) Generate your private and public keys in the frame below:
 
-<iframe src="https://forkbomb.eu/products/did-test-1-generate_keys_pks/" title="Keygen" width="700" height="700">Generate private and public keys</iframe>
+<iframe src="https://forkbombeu.github.io/products/did-test-1-generate_keys_pks/" title="Keygen" width="700" height="700">Generate private and public keys</iframe>
 
 In order to create your private and public keys, alternatively you can manually call this [API](https://apiroom.net/api/W3CDID/create_keys_pks) or run this [Zencode](https://apiroom.net/showme/zencode/W3CDID/create_keys_pks) in Zenroom.
 
@@ -96,7 +96,7 @@ In order to create your private and public keys, alternatively you can manually 
 2) Copy the public keys generated in the frame above, submit it and see the DID produced in the output:
 
 
-<iframe src="https://forkbomb.eu/products/did-test-2-generate_sandbox_did_doc/" title="Produce DID" width="700" height="1200">Produce and register DID</iframe>
+<iframe src="https://forkbombeu.github.io/products/did-test-2-generate_sandbox_did_doc/" title="Produce DID" width="700" height="1200">Produce and register DID</iframe>
 
 If the DID creation was successful, you should receive an output like: 
 
